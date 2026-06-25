@@ -1,0 +1,44 @@
+meta {
+  name: Crear Cita
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/appointments
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "appointmentDate": "2025-02-20",
+    "startTime": "2025-02-20T10:00:00",
+    "appointmentStatus": "Pendiente",
+    "clientId": 1,
+    "hairLengthOption": 3,
+    "services": [
+      { "serviceId": 1 }
+    ],
+    "products": [
+      { "productId": 1, "quantity": 2 }
+    ]
+  }
+}
+
+docs {
+  # Crear Cita
+  
+  Crea una nueva cita para un cliente.
+  
+  ## Body
+  | Campo | Tipo | Requerido | Descripción |
+  |-------|------|-----------|-------------|
+  | appointmentDate | date | Sí | Fecha de la cita |
+  | startTime | datetime | Sí | Hora de inicio |
+  | appointmentStatus | string | No | Estado inicial (default: Pendiente) |
+  | clientId | int | Sí | ID del cliente |
+  | hairLengthOption | int | No | Largo de cabello (1-9) |
+  | services | array | Sí | Lista de servicios |
+  | products | array | No | Lista de productos |
+}

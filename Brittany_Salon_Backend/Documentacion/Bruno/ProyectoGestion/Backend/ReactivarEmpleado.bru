@@ -1,0 +1,15 @@
+meta {
+  name: ReactivarEmpleado
+  type: http
+  seq: 7
+}
+
+patch {
+  url: https://localhost:7227/api/employees/1/reactivate
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

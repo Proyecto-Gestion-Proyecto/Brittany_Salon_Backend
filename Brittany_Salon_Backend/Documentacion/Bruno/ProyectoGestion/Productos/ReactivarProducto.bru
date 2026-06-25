@@ -1,0 +1,15 @@
+meta {
+  name: ReactivarProducto
+  type: http
+  seq: 7
+}
+
+patch {
+  url: https://localhost:7227/api/products/1/reactivate
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

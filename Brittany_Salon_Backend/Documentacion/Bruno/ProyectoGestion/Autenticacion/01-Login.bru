@@ -1,0 +1,34 @@
+meta {
+  name: Login
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/authentication/login
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "admin@salon.com",
+    "password": "Password123!"
+  }
+}
+
+docs {
+  # Login
+  
+  Autentica un usuario (empleado o cliente) en el sistema.
+  
+  ## Response
+  ```json
+  {
+    "userId": 1,
+    "name": "Admin",
+    "email": "admin@salon.com",
+    "userType": "Employee"
+  }
+  ```
+}

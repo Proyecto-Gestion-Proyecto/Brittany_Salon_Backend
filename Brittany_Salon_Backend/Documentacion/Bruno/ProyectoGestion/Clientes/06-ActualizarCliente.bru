@@ -1,0 +1,22 @@
+meta {
+  name: Actualizar Cliente
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{baseUrl}}/api/clients/1
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  name: Juan Pérez Actualizado
+  phone: 88889999
+}
+
+docs {
+  # Actualizar Cliente
+  
+  Actualiza los datos de un cliente. Solo los campos enviados se actualizan.
+}

@@ -1,0 +1,20 @@
+meta {
+  name: Actualizar Empleado
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{baseUrl}}/api/employees/1
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  name: María García López
+  specialty: Estilista Senior
+}
+
+docs {
+  # Actualizar Empleado
+}

@@ -1,0 +1,31 @@
+meta {
+  name: Actualizar Cita
+  type: http
+  seq: 7
+}
+
+put {
+  url: {{baseUrl}}/api/appointments/1
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "startTime": "2025-02-20T11:00:00",
+    "hairLengthOption": 4,
+    "services": [
+      { "serviceId": 1 },
+      { "serviceId": 2 }
+    ],
+    "products": [
+      { "productId": 1, "quantity": 1 }
+    ]
+  }
+}
+
+docs {
+  # Actualizar Cita
+  
+  Actualiza una cita existente. Solo se puede editar si está en estado **Pendiente**.
+}

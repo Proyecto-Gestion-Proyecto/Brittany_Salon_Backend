@@ -1,0 +1,22 @@
+meta {
+  name: Crear Categoría
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/categories
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "categoryName": "Cuidado Capilar",
+    "categoryDescription": "Productos para el cuidado del cabello"
+  }
+}
+
+docs {
+  # Crear Categoría
+}

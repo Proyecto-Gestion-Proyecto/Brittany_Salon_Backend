@@ -1,0 +1,39 @@
+meta {
+  name: Validar Disponibilidad
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{baseUrl}}/api/appointments/validate-availability
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "startTime": "2025-02-20T10:00:00",
+    "endTime": "2025-02-20T11:30:00",
+    "serviceIds": [1, 2],
+    "excludeAppointmentId": null
+  }
+}
+
+docs {
+  # Validar Disponibilidad
+  
+  Verifica si un horario está disponible para los servicios seleccionados.
+  
+  ## Horarios de Atención
+  - **Lunes a Viernes:** 9:00 AM - 8:00 PM
+  - **Sábado:** 9:00 AM - 6:00 PM
+  - **Domingo:** Cerrado
+  
+  ## Response
+  ```json
+  {
+    "isAvailable": true,
+    "message": "Horario disponible."
+  }
+  ```
+}

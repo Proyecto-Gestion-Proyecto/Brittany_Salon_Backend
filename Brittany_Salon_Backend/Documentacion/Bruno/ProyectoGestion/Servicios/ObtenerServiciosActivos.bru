@@ -1,0 +1,19 @@
+meta {
+  name: ObtenerServiciosActivos
+  type: http
+  seq: 3
+}
+
+get {
+  url: https://localhost:7227/api/services?onlyActive=true
+  body: none
+  auth: inherit
+}
+
+params:query {
+  onlyActive: true
+}
+
+settings {
+  encodeUrl: true
+}

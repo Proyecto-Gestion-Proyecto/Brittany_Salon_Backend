@@ -1,0 +1,15 @@
+meta {
+  name: ObtenerServicioPorId
+  type: http
+  seq: 5
+}
+
+get {
+  url: https://localhost:7227/api/services/5
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Obtener Todos los Empleados
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/employees?onlyActive=false
+  body: none
+  auth: inherit
+}
+
+query {
+  onlyActive: false
+}
+
+docs {
+  # Obtener Todos los Empleados
+}

@@ -1,0 +1,17 @@
+meta {
+  name: Obtener Cita por ID
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/appointments/1
+  body: none
+  auth: inherit
+}
+
+docs {
+  # Obtener Cita por ID
+  
+  Retorna el detalle completo de una cita incluyendo cliente, servicios y productos.
+}

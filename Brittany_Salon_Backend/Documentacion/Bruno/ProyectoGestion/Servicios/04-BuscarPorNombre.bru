@@ -1,0 +1,20 @@
+meta {
+  name: Buscar Servicios por Nombre
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/services/search?name=corte&onlyActive=false
+  body: none
+  auth: inherit
+}
+
+query {
+  name: corte
+  onlyActive: false
+}
+
+docs {
+  # Buscar Servicios por Nombre
+}

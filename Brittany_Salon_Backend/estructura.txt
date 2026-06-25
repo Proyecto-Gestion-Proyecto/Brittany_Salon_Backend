@@ -23,3 +23,35 @@
     │   ├── Repositories/
     │   ├── Services/
     │   └── Settings/
+
+
+
+    {
+    "Logging": {
+        "LogLevel": {
+            "Default": "Information",
+            "Microsoft.AspNetCore": "Warning"
+        }
+    },
+    "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost\\SQLEXPRESS;Database=BRITTANYSALON;Trusted_Connection=True;MultipleActiveResultSets=True;TrustServerCertificate=True;"
+  },
+    "JwtSettings": {
+        "SecretKey": "YourSuperSecretKeyThatMustBeAtLeast32CharactersLong!@#$%",
+        "Issuer": "BrittanySalonBackend",
+        "Audience": "BrittanySalonClients",
+        "AccessTokenExpirationMinutes": 15,
+        "RefreshTokenExpirationDays": 7
+    }
+} 
+
+Credenciales insertadas:
+┌─────────────────────────────────────────────────────────────────────┐
+│ ROL      │ EMAIL                            │ CONTRASEÑA             │        
+├─────────────────────────────────────────────────────────────────────┤
+│ EMPLOYEE │ antony.empleado@ucr.ac.cr        │ TonyML2025             │        
+│ EMPLOYEE │ sofia.rodriguez@brittanysalon.com│ SofiR2025!             │        
+│ CLIENT   │ laura.perez@gmail.com            │ LauraP2025             │        
+│ CLIENT   │ carlos.mendez@hotmail.com        │ CarlosM2025            │        
+└─────────────────────────────────────────────────────────────────────┘

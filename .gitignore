@@ -482,3 +482,131 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+
+# =============================================================================
+# PROYECTO BRITTANY SALON - Configuraciones espec�ficas
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Carpetas de im�genes subidas por usuarios
+# -----------------------------------------------------------------------------
+**/public/imageUser/*
+!**/public/imageUser/.gitkeep
+
+**/public/clients/*
+!**/public/clients/.gitkeep
+
+**/public/imageProduct/*
+!**/public/imageProduct/.gitkeep
+
+**/public/imageService/*
+!**/public/imageService/.gitkeep
+
+**/wwwroot/images/*
+!**/wwwroot/images/.gitkeep
+
+**/wwwroot/uploads/*
+!**/wwwroot/uploads/.gitkeep
+
+**/uploads/*
+!**/uploads/.gitkeep
+
+# -----------------------------------------------------------------------------
+# Archivos de configuraci�n local y secretos
+# -----------------------------------------------------------------------------
+appsettings.Development.json
+appsettings.Local.json
+appsettings.*.local.json
+appsettings.Production.json
+secrets.json
+*.secrets.json
+.env.local
+.env.development
+.env.development.local
+.env.test.local
+.env.production.local
+
+# -----------------------------------------------------------------------------
+# Certificados y claves (seguridad)
+# -----------------------------------------------------------------------------
+*.p12
+*.cer
+*.crt
+*.key
+*.pem
+*.jks
+
+# -----------------------------------------------------------------------------
+# Archivos de base de datos SQLite (desarrollo local)
+# -----------------------------------------------------------------------------
+*.sqlite
+*.sqlite3
+*.db
+*.db3
+
+# -----------------------------------------------------------------------------
+# Logs de aplicaci�n
+# -----------------------------------------------------------------------------
+logs/
+*.log
+!.gitkeep
+
+# -----------------------------------------------------------------------------
+# Docker (archivos locales)
+# -----------------------------------------------------------------------------
+docker-compose.override.yml
+docker-compose.local.yml
+.docker/
+
+# -----------------------------------------------------------------------------
+# Archivos de performance/profiling
+# -----------------------------------------------------------------------------
+*.diagsession
+*.etl
+*.heapsnapshot
+*.heaptimeline
+
+# -----------------------------------------------------------------------------
+# Entity Framework - Archivos de desarrollo
+# -----------------------------------------------------------------------------
+# Descomentar si no quieres versionar snapshots de modelos locales
+# **/Migrations/*ModelSnapshot.cs
+
+# -----------------------------------------------------------------------------
+# Archivos temporales de desarrollo
+# -----------------------------------------------------------------------------
+*.bak
+*.orig
+*.backup
+*.tmp
+~$*
+
+# -----------------------------------------------------------------------------
+# Swagger/OpenAPI generado
+# -----------------------------------------------------------------------------
+swagger.json
+openapi.json
+openapi.yaml
+
+# -----------------------------------------------------------------------------
+# Archivos de testing local
+# -----------------------------------------------------------------------------
+*.received.*
+*.verified.*
+TestResults/
+coverlet/
+lcov.info
+
+# -----------------------------------------------------------------------------
+# Postman/Insomnia collections (si contienen datos sensibles)
+# -----------------------------------------------------------------------------
+# *.postman_collection.json
+# *.insomnia.json
+
+# -----------------------------------------------------------------------------
+# Archivos auto-generados espec�ficos del proyecto
+# -----------------------------------------------------------------------------
+**/Generated/
+*.Generated.cs
+*.g.cs
+*.g.i.cs

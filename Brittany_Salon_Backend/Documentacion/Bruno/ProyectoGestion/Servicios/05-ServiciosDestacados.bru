@@ -1,0 +1,22 @@
+meta {
+  name: Servicios Destacados
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/api/services/featured?top=5&onlyActive=true
+  body: none
+  auth: inherit
+}
+
+query {
+  top: 5
+  onlyActive: true
+}
+
+docs {
+  # Obtener Servicios Destacados
+  
+  Retorna los servicios más solicitados.
+}

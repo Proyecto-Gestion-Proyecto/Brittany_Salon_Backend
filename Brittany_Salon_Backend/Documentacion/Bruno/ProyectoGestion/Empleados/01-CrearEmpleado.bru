@@ -1,0 +1,25 @@
+meta {
+  name: Crear Empleado
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/employees
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  name: María García
+  email: maria.garcia@salon.com
+  phone: 88881111
+  password: Password123!
+  specialty: Colorista
+  isActive: true
+  image: @file(./imagen.jpg)
+}
+
+docs {
+  # Crear Empleado
+}

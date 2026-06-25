@@ -1,0 +1,26 @@
+meta {
+  name: RegistrarServicio
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://localhost:7227/api/services
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  ServiceName: Corte de feirab
+  ServiceDescription: Corte pro
+  Price: 4500
+  DurationMinutes: 30
+  ServiceType: Cabello
+  IsActive: true
+  Image: @file(C:\Users\Isaac Chevez\Pictures\modelodecalidad.jpg)
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

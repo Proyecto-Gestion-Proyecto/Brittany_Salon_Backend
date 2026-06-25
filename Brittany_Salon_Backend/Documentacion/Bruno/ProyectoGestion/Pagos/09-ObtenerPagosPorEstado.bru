@@ -1,0 +1,21 @@
+meta {
+  name: Obtener Pagos por Estado
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/api/payments/by-status?active=true
+  body: none
+  auth: inherit
+}
+
+query {
+  active: true
+}
+
+docs {
+  # Obtener Pagos por Estado
+  
+  Filtra pagos por estado activo/inactivo.
+}

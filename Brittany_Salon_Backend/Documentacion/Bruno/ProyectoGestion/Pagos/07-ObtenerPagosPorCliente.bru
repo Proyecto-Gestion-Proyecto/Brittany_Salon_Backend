@@ -1,0 +1,17 @@
+meta {
+  name: Obtener Pagos por Cliente
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/api/payments/by-client/1
+  body: none
+  auth: inherit
+}
+
+docs {
+  # Obtener Pagos por Cliente
+  
+  Retorna todos los pagos realizados por un cliente.
+}

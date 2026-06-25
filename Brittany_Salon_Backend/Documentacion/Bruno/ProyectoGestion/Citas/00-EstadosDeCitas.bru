@@ -1,0 +1,37 @@
+meta {
+  name: 00-EstadosDeCitas
+  type: http
+  seq: 0
+}
+
+get {
+  url: {{baseUrl}}/api/appointments/by-status?status=Pendiente
+  body: none
+  auth: inherit
+}
+
+docs {
+  # Estados de Citas - Referencia
+  
+  ## Estados Disponibles
+  
+  | Estado | Codigo | Descripcion |
+  |--------|--------|-------------|
+  | Pendiente | `Pendiente` | Cita programada |
+  | Confirmada | `Confirmada` | Cliente confirmo asistencia |
+  | EnProgreso | `EnProgreso` | Cliente siendo atendido |
+  | CompletadaPendientePago | `CompletadaPendientePago` | Terminado, falta pagar |
+  | Finalizada | `Finalizada` | Completado y pagado |
+  | Cancelada | `Cancelada` | Cita cancelada |
+  
+  ## Transiciones
+  
+  | Estado Actual | Puede Cambiar A |
+  |---------------|-----------------|
+  | Pendiente | Confirmada, Cancelada |
+  | Confirmada | EnProgreso, Cancelada |
+  | EnProgreso | CompletadaPendientePago, Finalizada |
+  | CompletadaPendientePago | Finalizada |
+  | Finalizada | (estado final) |
+  | Cancelada | (estado final) |
+}

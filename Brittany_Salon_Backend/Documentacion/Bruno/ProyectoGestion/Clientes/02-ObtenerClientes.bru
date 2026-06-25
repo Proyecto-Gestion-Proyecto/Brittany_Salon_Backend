@@ -1,0 +1,24 @@
+meta {
+  name: Obtener Todos los Clientes
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/clients?onlyActive=false
+  body: none
+  auth: inherit
+}
+
+query {
+  onlyActive: false
+}
+
+docs {
+  # Obtener Todos los Clientes
+  
+  ## Query Parameters
+  | Param | Tipo | Default | Descripción |
+  |-------|------|---------|-------------|
+  | onlyActive | bool | false | Si true, solo retorna activos |
+}

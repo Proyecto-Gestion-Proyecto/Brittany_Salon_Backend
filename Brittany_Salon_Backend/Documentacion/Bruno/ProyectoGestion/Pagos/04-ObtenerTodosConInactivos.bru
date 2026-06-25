@@ -1,0 +1,17 @@
+meta {
+  name: Obtener Todos (Incluyendo Inactivos)
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/payments/all
+  body: none
+  auth: inherit
+}
+
+docs {
+  # Obtener Todos los Pagos (Incluyendo Inactivos)
+  
+  Retorna todos los pagos del sistema, incluyendo los inactivos.
+}

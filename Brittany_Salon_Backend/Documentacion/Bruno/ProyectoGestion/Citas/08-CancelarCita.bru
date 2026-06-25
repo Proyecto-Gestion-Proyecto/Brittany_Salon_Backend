@@ -1,0 +1,21 @@
+meta {
+  name: Cancelar Cita
+  type: http
+  seq: 8
+}
+
+put {
+  url: {{baseUrl}}/api/appointments/1/cancel
+  body: none
+  auth: inherit
+}
+
+docs {
+  # Cancelar Cita
+  
+  Cancela una cita. Solo se puede cancelar si está en estado:
+  - **Pendiente**
+  - **Confirmada**
+  
+  No se puede cancelar si está: Finalizada, CompletadaPendientePago, EnProgreso
+}

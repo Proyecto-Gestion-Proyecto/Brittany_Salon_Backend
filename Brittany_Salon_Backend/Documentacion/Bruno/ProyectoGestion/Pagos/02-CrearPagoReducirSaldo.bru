@@ -1,0 +1,26 @@
+meta {
+  name: Crear Pago y Reducir Saldo
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/api/payments/create-and-reduce-balance
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "appointmentId": 1,
+    "amount": 5000.00,
+    "paymentMethod": "Efectivo",
+    "paymentStatus": "Completado"
+  }
+}
+
+docs {
+  # Crear Pago y Reducir Saldo
+  
+  Registra un pago y automáticamente reduce el saldo pendiente del cliente.
+}

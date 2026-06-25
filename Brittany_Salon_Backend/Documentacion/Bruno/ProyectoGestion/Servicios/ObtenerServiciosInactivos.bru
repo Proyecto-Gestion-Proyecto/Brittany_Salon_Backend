@@ -1,0 +1,19 @@
+meta {
+  name: ObtenerServiciosInactivos
+  type: http
+  seq: 4
+}
+
+get {
+  url: https://localhost:7227/api/services?onlyActive=false
+  body: none
+  auth: inherit
+}
+
+params:query {
+  onlyActive: false
+}
+
+settings {
+  encodeUrl: true
+}

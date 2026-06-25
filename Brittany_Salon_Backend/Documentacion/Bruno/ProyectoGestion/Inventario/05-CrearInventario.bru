@@ -1,0 +1,19 @@
+meta {
+  name: Crear Inventario
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:5000/api/inventories
+  body: json
+}
+
+:json {
+  {
+    "productId": 1,
+    "quantity": 50,
+    "minimumStock": 10,
+    "category": "Hair Products"
+  }
+}

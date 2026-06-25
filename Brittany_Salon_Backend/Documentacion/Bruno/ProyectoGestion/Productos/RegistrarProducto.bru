@@ -1,0 +1,25 @@
+meta {
+  name: RegistrarProducto
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://localhost:7227/api/products
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  productName: Shampoo Anticaída
+  productDescription: Shampoo fortalecedor con biotina
+  price: 8500
+  expirationDate: 2026-12-31
+  categoryId: 1
+  image: @file(C:\Users\Isaac Chevez\Pictures\Screenshots\Captura de pantalla 2025-09-07 211518.png)
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,17 @@
+meta {
+  name: Obtener Citas por Cliente
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/api/appointments/by-client/1
+  body: none
+  auth: inherit
+}
+
+docs {
+  # Obtener Citas por Cliente
+  
+  Retorna todas las citas de un cliente específico.
+}

@@ -1,0 +1,23 @@
+meta {
+  name: Actualizar Pago
+  type: http
+  seq: 10
+}
+
+put {
+  url: {{baseUrl}}/api/payments/1
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "amount": 7500.00,
+    "paymentMethod": "Tarjeta",
+    "paymentStatus": "Completado"
+  }
+}
+
+docs {
+  # Actualizar Pago
+}

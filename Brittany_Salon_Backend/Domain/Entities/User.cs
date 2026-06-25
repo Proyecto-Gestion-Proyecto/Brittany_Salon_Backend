@@ -4,39 +4,31 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Brittany_Salon_Backend.Domain.Entities
 {
-    //[Table("Usuarios")]
     public class User
     {
-        //[Key]
-        // [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        private int Id { get; set; }
+        [Key]
+        public int Id { get; set; }
 
-        //[Required(ErrorMessage = "El nombre es obligatorio")]
-        //[StringLength (100, ErrorMessage = "El nombre no puede exceder 100 caracteres")] //logitud de 100
+        [Required]
+        [MaxLength(100)]
+        public string Name { get; set; } = string.Empty;
 
-        private string name { get; set; }
+        public int Phone { get; set; }
 
-        private int Phone { get; set; }
+        [Required]
+        [MaxLength(150)]
+        public string Email { get; set; } = string.Empty;
 
-        private string email { get; set; }
+        [Required]
+        [MaxLength(255)]
+        public string Password { get; set; } = string.Empty;
 
-        private string password { get; set; }
-    
-        private string image { get; set; }
+        [MaxLength(255)]
+        public string? Image { get; set; }
 
-        private DateTime dateCreated { get; set; } = DateTime.Now;
+        public DateTime DateCreated { get; set; } = DateTime.Now;
 
-        private Boolean isActive { get; set; }
-
-        public User(string name, int phone, string email, string password, string image, Boolean isActive)
-        {
-            this.name = name;
-            this.Phone = phone;
-            this.email = email;
-            this.password = password;
-            this.image = image;
-            this.isActive = isActive;
-        }
+        public bool IsActive { get; set; } = true;
 
         public User() { }
     }

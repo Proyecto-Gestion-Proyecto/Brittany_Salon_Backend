@@ -1,0 +1,19 @@
+meta {
+  name: Obtener Todos los Productos
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/products?onlyActive=false
+  body: none
+  auth: inherit
+}
+
+query {
+  onlyActive: false
+}
+
+docs {
+  # Obtener Todos los Productos
+}

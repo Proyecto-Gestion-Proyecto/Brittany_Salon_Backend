@@ -1,6 +1,140 @@
 @Brittany_Salon_Backend_HostAddress = http://localhost:5268
 
-GET {{Brittany_Salon_Backend_HostAddress}}/weatherforecast/
+### ============================================
+### EMPLEADOS (Employees)
+### ============================================
+
+### Obtener todos los empleados
+GET {{Brittany_Salon_Backend_HostAddress}}/api/employees
 Accept: application/json
 
 ###
+
+### Obtener solo empleados activos
+GET {{Brittany_Salon_Backend_HostAddress}}/api/employees?onlyActive=true
+Accept: application/json
+
+###
+
+### Obtener empleado por ID
+GET {{Brittany_Salon_Backend_HostAddress}}/api/employees/1
+Accept: application/json
+
+###
+
+### Buscar empleados por nombre
+GET {{Brittany_Salon_Backend_HostAddress}}/api/employees/search/by-name?name=Antony
+Accept: application/json
+
+###
+
+### Buscar empleados por nombre (solo activos)
+GET {{Brittany_Salon_Backend_HostAddress}}/api/employees/search/by-name?name=Antony&onlyActive=true
+Accept: application/json
+
+###
+
+### Buscar empleados por especialidad
+GET {{Brittany_Salon_Backend_HostAddress}}/api/employees/search/by-specialty?specialty=corte
+Accept: application/json
+
+###
+
+### Buscar empleados por especialidad (solo activos)
+GET {{Brittany_Salon_Backend_HostAddress}}/api/employees/search/by-specialty?specialty=corte&onlyActive=true
+Accept: application/json
+
+###
+
+### Desactivar empleado (eliminacion logica)
+PATCH {{Brittany_Salon_Backend_HostAddress}}/api/employees/1/deactivate
+
+###
+
+### Reactivar empleado
+PATCH {{Brittany_Salon_Backend_HostAddress}}/api/employees/1/reactivate
+
+###
+
+### ELIMINAR PERMANENTEMENTE empleado (NO se puede deshacer)
+DELETE {{Brittany_Salon_Backend_HostAddress}}/api/employees/1
+
+###
+
+### NOTA: Para crear/editar empleados usar Bruno o Swagger (multipart/form-data)
+###
+### POST /api/employees (Crear):
+### - Name: string (obligatorio)
+### - Phone: string (8 digitos, obligatorio)
+### - Email: string (obligatorio)
+### - Password: string (min 8 chars, mayuscula, minuscula, numero, especial, obligatorio)
+### - Specialty: string (opcional)
+### - IsActive: bool (opcional, default true)
+### - Image: File (opcional, .jpg/.png/.webp)
+###
+### PUT /api/employees/{id} (Editar):
+### - Name: string (opcional)
+### - Phone: string (opcional)
+### - Email: string (opcional)
+### - Password: string (opcional)
+### - Specialty: string (opcional)
+### - IsActive: bool (opcional)
+### - Image: File (opcional, reemplaza la imagen anterior)
+### - RemoveImage: bool (si es true, elimina la imagen sin reemplazar)
+
+### ============================================
+### SERVICIOS (Services)
+### ============================================
+
+### Obtener todos los servicios
+GET {{Brittany_Salon_Backend_HostAddress}}/api/services
+Accept: application/json
+
+###
+
+### Obtener solo servicios activos
+GET {{Brittany_Salon_Backend_HostAddress}}/api/services?onlyActive=true
+Accept: application/json
+
+###
+
+### Obtener servicio por ID
+GET {{Brittany_Salon_Backend_HostAddress}}/api/services/1
+Accept: application/json
+
+###
+
+### Crear nuevo servicio
+POST {{Brittany_Salon_Backend_HostAddress}}/api/services
+Content-Type: application/json
+
+{
+  "serviceName": "Corte de cabello",
+  "serviceDescription": "Corte profesional para damas y caballeros",
+  "price": 5000.00,
+  "durationMinutes": 30,
+  "imageUrl": "https://ejemplo.com/corte.jpg",
+  "serviceType": "Cabello",
+  "isActive": true
+}
+
+###
+
+### Actualizar servicio existente
+PUT {{Brittany_Salon_Backend_HostAddress}}/api/services/1
+Content-Type: application/json
+
+{
+  "serviceName": "Corte de cabello Premium",
+  "serviceDescription": "Corte profesional con lavado incluido",
+  "price": 7500.00,
+  "durationMinutes": 45,
+  "imageUrl": "https://ejemplo.com/corte-premium.jpg",
+  "serviceType": "Cabello",
+  "isActive": true
+}
+
+###
+
+### Desactivar servicio
+PATCH {{Brittany_Salon_Backend_HostAddress}}/api/services/1/deactivate

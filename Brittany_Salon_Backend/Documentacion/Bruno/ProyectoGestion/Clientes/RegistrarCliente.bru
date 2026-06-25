@@ -1,0 +1,24 @@
+meta {
+  name: RegistrarCliente
+  type: http
+  seq: 5
+}
+
+post {
+  url: https://localhost:7227/api/clients
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  Name: John Doe @contentType(Text)
+  Email: john.doe@example.com @contentType(Text)
+  Phone: 12345678 @contentType(Text)
+  Password: password123 @contentType(Text)
+  IsActive: true @contentType(Text)
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

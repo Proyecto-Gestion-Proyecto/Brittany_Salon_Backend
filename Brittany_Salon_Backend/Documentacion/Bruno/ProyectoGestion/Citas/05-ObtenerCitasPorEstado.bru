@@ -1,0 +1,31 @@
+meta {
+  name: Obtener Citas por Estado
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/api/appointments/by-status?status=Pendiente
+  body: none
+  auth: inherit
+}
+
+query {
+  status: Pendiente
+}
+
+docs {
+  # Obtener Citas por Estado
+  
+  Filtra las citas por estado.
+  
+  ## Estados Disponibles
+  | Estado | Descripción |
+  |--------|-------------|
+  | Pendiente | Cita programada |
+  | Confirmada | Cliente confirmó |
+  | EnProgreso | En atención |
+  | CompletadaPendientePago | Terminada, falta pago |
+  | Finalizada | Completada y pagada |
+  | Cancelada | Cancelada |
+}

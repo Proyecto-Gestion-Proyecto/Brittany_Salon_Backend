@@ -1,0 +1,11 @@
+USE BRITTANYSALON
+
+ALTER TABLE Inventory
+DROP COLUMN category;
+
+ALTER TABLE Inventory
+ADD 
+    maximumStock INT NOT NULL,
+    location NVARCHAR(100) NULL,
+    notes NVARCHAR(255) NULL,
+    lastUpdatedAt DATETIME2 NOT NULL DEFAULT SYSDATETIME();

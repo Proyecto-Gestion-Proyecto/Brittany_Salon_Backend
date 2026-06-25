@@ -1,0 +1,15 @@
+meta {
+  name: Desactivar Empleado
+  type: http
+  seq: 7
+}
+
+patch {
+  url: {{baseUrl}}/api/employees/1/deactivate
+  body: none
+  auth: inherit
+}
+
+docs {
+  # Desactivar Empleado
+}

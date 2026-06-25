@@ -1,0 +1,27 @@
+meta {
+  name: Obtener Saldo Pendiente Cita
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{baseUrl}}/api/appointments/1/pending-balance
+  body: none
+  auth: inherit
+}
+
+docs {
+  # Obtener Saldo Pendiente de Cita
+  
+  Calcula el saldo pendiente de una cita.
+  
+  **Fórmula:** `TotalCost - SUM(Pagos)`
+  
+  ## Response
+  ```json
+  {
+    "appointmentId": 1,
+    "pendingBalance": 15000.00
+  }
+  ```
+}

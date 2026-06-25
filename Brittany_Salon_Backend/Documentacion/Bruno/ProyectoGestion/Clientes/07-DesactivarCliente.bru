@@ -1,0 +1,17 @@
+meta {
+  name: Desactivar Cliente
+  type: http
+  seq: 7
+}
+
+patch {
+  url: {{baseUrl}}/api/clients/1/deactivate
+  body: none
+  auth: inherit
+}
+
+docs {
+  # Desactivar Cliente
+  
+  Desactiva un cliente (eliminación lógica).
+}

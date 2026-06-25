@@ -1,0 +1,26 @@
+meta {
+  name: Obtener Citas por Fecha
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/appointments/by-date?date=2025-02-20
+  body: none
+  auth: inherit
+}
+
+query {
+  date: 2025-02-20
+}
+
+docs {
+  # Obtener Citas por Fecha
+  
+  Filtra las citas por una fecha específica.
+  
+  ## Query Parameters
+  | Param | Tipo | Descripción |
+  |-------|------|-------------|
+  | date | date | Fecha a filtrar (YYYY-MM-DD) |
+}

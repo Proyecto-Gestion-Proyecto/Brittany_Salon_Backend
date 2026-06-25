@@ -1,0 +1,34 @@
+meta {
+  name: Crear Cliente
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/clients
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  name: Juan Pérez
+  email: juan.perez@email.com
+  phone: 88887777
+  password: Password123!
+  image: @file(./imagen.jpg)
+}
+
+docs {
+  # Crear Cliente
+  
+  Registra un nuevo cliente en el sistema.
+  
+  ## Body (multipart/form-data)
+  | Campo | Tipo | Requerido |
+  |-------|------|-----------|
+  | name | string | Sí |
+  | email | string | Sí |
+  | phone | string | Sí |
+  | password | string | Sí |
+  | image | file | No |
+}

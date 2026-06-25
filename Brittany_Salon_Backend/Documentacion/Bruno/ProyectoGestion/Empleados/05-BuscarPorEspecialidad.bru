@@ -1,0 +1,20 @@
+meta {
+  name: Buscar por Especialidad
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/api/employees/search/by-specialty?specialty=colorista&onlyActive=false
+  body: none
+  auth: inherit
+}
+
+query {
+  specialty: colorista
+  onlyActive: false
+}
+
+docs {
+  # Buscar Empleados por Especialidad
+}

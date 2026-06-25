@@ -1,0 +1,17 @@
+meta {
+  name: Obtener Saldo Pendiente
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/api/clients/1/balance
+  body: none
+  auth: inherit
+}
+
+docs {
+  # Obtener Saldo Pendiente del Cliente
+  
+  Retorna el saldo pendiente acumulado del cliente.
+}

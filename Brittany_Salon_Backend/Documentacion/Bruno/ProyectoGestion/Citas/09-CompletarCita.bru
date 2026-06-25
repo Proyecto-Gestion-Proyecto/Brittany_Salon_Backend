@@ -1,0 +1,20 @@
+meta {
+  name: Completar Cita
+  type: http
+  seq: 9
+}
+
+put {
+  url: {{baseUrl}}/api/appointments/1/complete
+  body: none
+  auth: inherit
+}
+
+docs {
+  # Completar Cita
+  
+  Marca una cita como completada. El estado final depende del saldo:
+  
+  - **Saldo = 0** ? Estado: `Finalizada`
+  - **Saldo > 0** ? Estado: `CompletadaPendientePago`
+}

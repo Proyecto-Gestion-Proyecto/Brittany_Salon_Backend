@@ -1,0 +1,32 @@
+meta {
+  name: Crear Pago
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/payments
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "appointmentId": 1,
+    "amount": 5000.00,
+    "paymentMethod": "Efectivo",
+    "paymentStatus": "Completado"
+  }
+}
+
+docs {
+  # Crear Pago
+  
+  Registra un nuevo pago para una cita.
+  
+  ## Métodos de Pago
+  - Efectivo
+  - Tarjeta
+  - Transferencia
+  - Sinpe
+}

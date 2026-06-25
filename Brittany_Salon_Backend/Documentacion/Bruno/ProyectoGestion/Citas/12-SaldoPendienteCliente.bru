@@ -1,0 +1,17 @@
+meta {
+  name: Obtener Saldo Pendiente Cliente
+  type: http
+  seq: 12
+}
+
+get {
+  url: {{baseUrl}}/api/appointments/1/pending-balance-client
+  body: none
+  auth: inherit
+}
+
+docs {
+  # Obtener Saldo Pendiente por Cliente
+  
+  Obtiene el saldo pendiente total de todas las citas del cliente asociado.
+}

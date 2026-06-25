@@ -1,0 +1,22 @@
+meta {
+  name: Buscar Cliente por Nombre
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/clients/search/by-name?name=Juan&onlyActive=false
+  body: none
+  auth: inherit
+}
+
+query {
+  name: Juan
+  onlyActive: false
+}
+
+docs {
+  # Buscar Cliente por Nombre
+  
+  Búsqueda parcial por nombre.
+}

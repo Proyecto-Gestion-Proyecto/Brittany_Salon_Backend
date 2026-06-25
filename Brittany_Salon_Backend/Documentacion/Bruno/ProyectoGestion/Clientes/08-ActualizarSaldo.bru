@@ -1,0 +1,21 @@
+meta {
+  name: Actualizar Saldo
+  type: http
+  seq: 8
+}
+
+patch {
+  url: {{baseUrl}}/api/clients/1/balance
+  body: json
+  auth: inherit
+}
+
+body:json {
+  5000.00
+}
+
+docs {
+  # Actualizar Saldo del Cliente
+  
+  Actualiza manualmente el saldo pendiente de un cliente.
+}

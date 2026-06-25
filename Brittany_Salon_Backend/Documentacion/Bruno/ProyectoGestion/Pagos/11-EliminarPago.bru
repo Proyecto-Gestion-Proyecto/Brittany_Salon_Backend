@@ -1,0 +1,17 @@
+meta {
+  name: Eliminar Pago
+  type: http
+  seq: 11
+}
+
+delete {
+  url: {{baseUrl}}/api/payments/1
+  body: none
+  auth: inherit
+}
+
+docs {
+  # Eliminar Pago
+  
+  Desactiva un pago (eliminación lógica).
+}

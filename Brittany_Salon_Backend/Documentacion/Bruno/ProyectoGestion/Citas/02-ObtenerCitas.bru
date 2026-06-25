@@ -1,0 +1,17 @@
+meta {
+  name: Obtener Todas las Citas
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/appointments
+  body: none
+  auth: inherit
+}
+
+docs {
+  # Obtener Todas las Citas
+  
+  Retorna todas las citas del sistema ordenadas por fecha descendente.
+}

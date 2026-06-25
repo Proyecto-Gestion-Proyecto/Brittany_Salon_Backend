@@ -1,0 +1,20 @@
+meta {
+  name: Obtener Pagos por Rango de Fechas
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{baseUrl}}/api/payments/by-date?startDate=2025-01-01&endDate=2025-12-31
+  body: none
+  auth: inherit
+}
+
+query {
+  startDate: 2025-01-01
+  endDate: 2025-12-31
+}
+
+docs {
+  # Obtener Pagos por Rango de Fechas
+}

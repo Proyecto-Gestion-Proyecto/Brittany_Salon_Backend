@@ -1,0 +1,17 @@
+meta {
+  name: Obtener Todos los Pagos
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/payments
+  body: none
+  auth: inherit
+}
+
+docs {
+  # Obtener Todos los Pagos
+  
+  Retorna todos los pagos activos del sistema.
+}

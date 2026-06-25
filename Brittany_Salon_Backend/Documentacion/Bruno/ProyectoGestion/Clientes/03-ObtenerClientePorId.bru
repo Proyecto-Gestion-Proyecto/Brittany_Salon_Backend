@@ -1,0 +1,17 @@
+meta {
+  name: Obtener Cliente por ID
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/clients/1
+  body: none
+  auth: inherit
+}
+
+docs {
+  # Obtener Cliente por ID
+  
+  Retorna los datos de un cliente específico.
+}

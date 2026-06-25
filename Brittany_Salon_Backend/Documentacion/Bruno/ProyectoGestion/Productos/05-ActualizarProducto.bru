@@ -1,0 +1,20 @@
+meta {
+  name: Actualizar Producto
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{baseUrl}}/api/products/1
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  productName: Shampoo Premium
+  price: 15000
+}
+
+docs {
+  # Actualizar Producto
+}

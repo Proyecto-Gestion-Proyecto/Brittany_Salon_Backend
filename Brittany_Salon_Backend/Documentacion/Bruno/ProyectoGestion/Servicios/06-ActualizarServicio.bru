@@ -1,0 +1,20 @@
+meta {
+  name: Actualizar Servicio
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{baseUrl}}/api/services/1
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  serviceName: Corte Premium
+  price: 18000
+}
+
+docs {
+  # Actualizar Servicio
+}

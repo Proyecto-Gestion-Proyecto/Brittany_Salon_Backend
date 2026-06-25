@@ -1,0 +1,26 @@
+meta {
+  name: RegistrarEmpleado
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://localhost:7227/api/Employees
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  Name: Name	Antony Monge @contentType(Text)
+  Phone: 85456150 @contentType(Text)
+  Email: antonyml2016@gmail.com @contentType(Text)
+  Password: TonymlA12912! @contentType(Text)
+  Specialty: Corte de cabello @contentType(Text)
+  IsActive: true @contentType(Text)
+  Image: @file(D:\datos\Pictures\FotoPerfilFORMAL\Imagen de WhatsApp 2025-10-06 a las 16.27.07_e7d88f3d.jpg) @contentType(File)
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
